@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Includes/styles.css">
+    <title>Vlad's Quality Instruments</title>
+  </head>
+  <header>
+        <nav class="navbar navbar-light bg-light">
+              <div id="title">
+                <a class="navbar-brand" href="index.html">
+                  <img width="40" height="40" class="d-inline-block align-top" alt="">
+                  Vlad's Quality Instruments
+                </a>
+              </div>
+              <div id="slogan">The home of all your Instrument needs!</div>
+              <div id="navigation">
+                  <h3 id="greeting">Welcome, Vladamir! </h3>
+                  <button id="addproduct" onclick="location.href='admin_add.html'">Add Product</button>
+                  <div class="dropdown">
+                      <button class="dropbtn">Account</button>
+                      <div class="dropdown-content">
+                        <a href="cart.html">My Cart</a>
+                        <a href="orderhistory.html">Order History</a>
+                      </div>
+                  </div>
+                  <button id="signout">Sign Out</button>
+              </div>
+        </nav>
+  </header>
+
+  <body>
+      <div id="content">
+          <h2><b>Add a Product</b></h2>
+          <form id="addproduct" action="Includes/PHP/admin_add.php" onsubmit="return validateForm()">
+		          <h3>Product Name:</h3>
+              <input type="text" name="name" id="name" required/></br>
+          
+		          <h3>Product Description</h3>
+              <textarea rows="4" cols="50" name="description"></textarea></br>
+
+              <h3>Product Image</h3>
+              <input type="text" name="image" id="image"/>
+              <button id="browse" onclick="browse()">Browse</button>
+
+              <h3>Product's Categories</h3>
+              <input type="checkbox" name="category" id="Stringed Instrument">
+              <span id="checkbox"> Stringed Instrument</span>
+              <input type="checkbox" name="category" id="Woodwind Instrument">
+              <span id="checkbox"> Woodwind Instrument</span>
+              <input type="checkbox" name="category" id="Keyboard">
+              <span id="checkbox"> Keyboard</span><br>
+
+              <input type="checkbox" name="category" id="Guitar">
+              <span id="checkbox"> Guitar</span>
+              <input type="checkbox" name="category" id="Drum">
+              <span id="checkbox"> Drum</span>
+              <input type="checkbox" name="category" id="Classical Instruments">
+              <span id="checkbox"> Classical Instrument</span><br>
+
+              <input type="checkbox" name="category" id="Acoustic Instruments">
+              <span id="checkbox"> Acoustic Instrument</span>
+              <input type="checkbox" name="category" id="Electric Instruments">
+              <span id="checkbox"> Electric Instrument</span>
+              <input type="checkbox" name="category" id="Accessories">
+              <span id="checkbox"> Accessory</span><br>
+
+              <input type="checkbox" name="category" id="Amp"
+              ><span id="checkbox"> Amp</span>
+              <br>
+
+		          <h3>Product Price</h3>
+              $ <input type="number" step="0.01" name="price" id="price" required/></br>
+            
+		          </br>
+		          <input type="submit"/>
+            </form>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="Includes/JavaScript/admin_add.js"></script>
+  </body>
+  <footer>
+      <table>
+          <tr>
+              <td >Copyright &copy; 2019. All rights reserved</td>
+          </tr>
+      </table>
+  </footer>
+</html>

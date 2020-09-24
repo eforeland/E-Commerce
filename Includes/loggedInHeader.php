@@ -1,0 +1,44 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="Includes/styles.css">
+    <title>Add Product</title>
+</head>
+<?php 
+    include("Includes/db_connect.php");
+    $wquery = "SELECT fname FROM user WHERE user_email = '$username';";
+    $fname_array = mysqli_query($dbc, $wquery);
+
+    while ($user = mysqli_fetch_array($fname_array)) {
+      $fname = $user['fname'];
+    } 
+?>
+
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div id="title">
+            <a class="navbar-brand" href="view_products.php">
+                <img width="40" height="40" class="d-inline-block align-top" alt="">
+                Vlad's Quality Instruments
+            </a>
+        </div>
+        <div id="slogan">The home of all your Instrument needs!</div>
+        <div id="navigation">
+            <h3 id="greeting">Welcome, <?php $fname ?></h3>
+            <button id="addproduct" onclick="location.href='admin_add_form.php'">Add Product</button>
+            <div class="dropdown">
+                <button class="dropbtn">Account</button>
+                <div class="dropdown-content">
+                    <a href="cart.html">My Cart</a>
+                    <a href="orderhistory.html">Order History</a>
+                </div>
+            </div>
+            <button id="signout">Sign Out</button>
+        </div>
+    </nav>
+</header>

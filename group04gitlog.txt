@@ -1,0 +1,11 @@
+Erik: updated viewProducts
+Erik: updated images
+Erik: updated images
+Erik: updated wed. 20
+Erik: Merge branch 'dev_dawson' of https://gitlab.camosun.bc.ca/ics199-2019/group04/shopping-cart into dev_erik
+Dawson: Merge branch 'dev_dawson' of https://gitlab.camosun.bc.ca/ics199-2019/group04/shopping-cart into dev_dawson
+Dawson: Created cart.html, Made view cart functional, made the dropdown nice
+Dawson: Delete .gitkeep
+Dawson: Delete test
+Dawson: Added a dropdown menu for guitars, Added slogan in header
+Dawson: Added a Header and a list for the categories
